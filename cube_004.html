@@ -60,7 +60,16 @@ var lab={
     }
 }
 
-
+function create_lab(lab){
+    walls=[]
+    walls.push(
+        wall = new THREE.Mesh(
+            new THREE.PlaneGeometry(10,10),
+            new THREE.MeshBasicMaterial({color:color_paredes, wireframe:USE_WIREFRAME})
+        )
+        wall.rotateX( Math.PI / 2 );
+    )
+}
 
 function init(){
 	scene = new THREE.Scene();
@@ -78,7 +87,8 @@ function init(){
 		new THREE.MeshBasicMaterial({color:0xffffff, wireframe:USE_WIREFRAME})
 	);
 	meshFloor.rotation.x -= Math.PI / 2; // Rotate the floor 90 degrees
-	scene.add(meshFloor);
+	
+        scene.add(meshFloor);
 	
 	camera.position.set(0, player.height, -5);
 	camera.lookAt(new THREE.Vector3(0,player.height,0));
