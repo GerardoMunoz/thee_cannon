@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Moviendo un cubo con botones en dispositivos móviles</title>
+    <title>Lab</title>
     <style>
 /*
         body {
@@ -28,9 +28,38 @@ var keyboard = {};
 var player = { height:1.8, speed:0.2, turnSpeed:Math.PI*0.02 };
 var USE_WIREFRAME = false;
 // lab
-var lab={
 
+var color_techos=color:0xff4444
+var color_pisos=color:0xff4444
+var color_puertas=color:0xff4444
+var color_paredes=color:0xff4444
+var delta=0.01
+
+
+var lab={
+    corner:[0,0,0],
+    size:[10,-6,2],
+    floor:{color:color_techos, wireframe:USE_WIREFRAME}
+    ceiling:{color:color_pisos, wireframe:USE_WIREFRAME}
+    wallx:{
+        color:color_paredes,
+        door:{
+            color:color_puertas,
+            dim_wh:[0.8,1.5],
+            place:0// -1 to 1, neg hinge changes
+        }
+    }
+    wally:{
+        color:color_paredes,
+    }
+    wallxo:{
+        color:color_paredes,
+    }
+    wallyo:{
+        color:color_paredes,
+    }
 }
+
 
 
 function init(){
