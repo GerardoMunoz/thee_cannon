@@ -67,14 +67,15 @@ function create_lab(lab){
             new THREE.PlaneGeometry(10,10),
             new THREE.MeshBasicMaterial({color:color_paredes, wireframe:USE_WIREFRAME})
         )
-        wall.rotateX( Math.PI / 2 );
+        //wall.rotateX( Math.PI / 2 );
     )
+    scene.add(walls)
 }
 
 function init(){
 	scene = new THREE.Scene();
 	camera = new THREE.PerspectiveCamera(90, 1280/720, 0.1, 1000);
-	
+	create_lab(lab)
 	mesh = new THREE.Mesh(
 		new THREE.BoxGeometry(1,1,1),
 		new THREE.MeshBasicMaterial({color:0xff4444, wireframe:USE_WIREFRAME})
