@@ -22,7 +22,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
 
-import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
+//import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
 
 var scene, camera, renderer, mesh;
 var meshFloor;
@@ -102,7 +102,7 @@ function keyDown(event){
 function keyUp(event){
 	keyboard[event.keyCode] = false;
 }
-
+/*
 // instantiate a loader
 const loader = new SVGLoader();
 
@@ -155,7 +155,7 @@ loader.load(
 
 	}
 );
-
+*/
 window.addEventListener('keydown', keyDown);
 window.addEventListener('keyup', keyUp);
 
