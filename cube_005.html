@@ -44,7 +44,7 @@ function init(){
 	
 	meshFloor = new THREE.Mesh(
 		new THREE.PlaneGeometry(10,10, 10,10),
-		new THREE.MeshBasicMaterial({color:0x00ffff, wireframe:USE_WIREFRAME})
+		new THREE.MeshBasicMaterial({color:0xffffff, wireframe:USE_WIREFRAME})
 	);
 	meshFloor.rotation.x -= Math.PI / 2; // Rotate the floor 90 degrees
 	scene.add(meshFloor);
